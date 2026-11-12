@@ -22,14 +22,15 @@ except ImportError:
 # ---------------- settings ----------------
 STORE = "https://duraweather.com"
 COLLECTION = "quick-ship"
-SHOW_PRICES = True          # price on each product, dated "Prices as of ..."
+SHOW_PRICES = False         # prices are left out; each photo links to the product page
 SKIP_SOLD_OUT = True        # leave out products with no available variant
 PUBLIC_URL = "https://rmejila0708.github.io/duraweather-catalog/quick-ship/"   # for link previews
 UTM = "utm_source=catalog&utm_medium=flipbook&utm_campaign=quick-ship-2026"
 HERE = Path(__file__).resolve().parent
 OUT = HERE / "quick-ship"
 CACHE = HERE / ".cache"     # raw downloads, safe to delete, not published
-CARD_W, FEATURE_W, HERO_W = 760, 1300, 2200   # image widths in px
+CLEAN_W, PHOTO_W, HERO_W = 900, 1300, 2200   # image widths in px (studio shots / photos / hero spreads)
+TILE = (239, 239, 235)      # background tile behind studio shots, as RGB
 # ------------------------------------------
 
 # Product -> section. First match wins, order matters.
@@ -64,7 +65,7 @@ HEROES = {
     "COVER": "IMG_8092_44f63a28-e78e-46a0-8ee4-ba6ebe741cad.jpg",
     "INTRO": "Classic3PieceAdriondackBistroSet-4FMBLK.jpg",
     "Adirondack chairs": "Folding_Adirondacks_WW.jpg",
-    "Dining": "18767_5pc_brookshire2.jpg",
+    "Dining": "DuraWeather_Poly_4pc_Dset4.jpg",
     "Counter & bar": "Lifestyle2_c6a2aa93-5520-4b1d-bf75-ba68fba4b98f.jpg",
     "Rockers": "Singlerocker4.jpg",
     "Gliders, benches & swings": "DuraWeatherFAGlider3pcset10.jpg",
@@ -73,8 +74,8 @@ HEROES = {
     "Fire pits": "IMG_7533_bd649537-da41-4d62-8cdd-adff0aed2fae.jpg",
     "Accessories": "OriginalAll-WeatherSunbrellaHammocks-50ShoreRegatta3.jpg",
 }
-FEATURE_MIN = 5       # sections with at least this many pieces open with two featured pieces
-PER_PAGE = 6          # pieces on a standard grid page
+CLEAN_PER_PAGE = 4    # studio shots (white backdrop) per page
+PHOTO_PER_PAGE = 2    # photos with a real background per page, shown large
 
 UA = {"User-Agent": "Mozilla/5.0 (DuraWeather catalog builder)"}
 
@@ -132,9 +133,11 @@ def clean_title(p):
     t = re.sub(r"(?i)^duraweather\s*(poly)?\s*", "", t).strip(" -")
     if not t:   # some titles are only the brand name; fall back to the URL handle
         t = re.sub(r"(?i)^duraweather[- ]?(poly[- ]?)?", "", p["handle"]).replace("-", " ").strip()
-    if t.isupper() or t.islower():
-        t = t.title()
+    letters = [c for c in t if c.isalpha()]
+    if letters and (sum(c.isupper() for c in letters) / len(letters) > 0.6 or t.islower()):
+        t = re.sub(r"\b[Xx]\b", "x", t.title())
     t = re.sub(r"\s+", " ", t)
+    t = re.sub(r"\b(With|And|Of|For|In|On|Or)\b", lambda m: m.group(1).lower(), t)
     return t[:1].upper() + t[1:] if t else p["handle"]
 
 def money(x):
@@ -186,38 +189,73 @@ def to_rgb(im):
     return im.convert("RGB")
 
 def edge_info(im):
-    """Look at the four corners. Flat, matching corners mean a product shot on a plain backdrop
-    (show the whole piece); busy corners mean a scene (fill the frame)."""
+    """Look at the four corners. Flat, matching corners mean a product shot on a plain backdrop;
+    busy corners mean a scene. Returns (flat, average corner color)."""
     w, h = im.size
     t = max(4, int(min(w, h) * 0.04))
     boxes = [(0, 0, t, t), (w - t, 0, w, t), (0, h - t, t, h), (w - t, h - t, w, h)]
     means, spreads = [], []
     for bx in boxes:
-        px = list(im.crop(bx).resize((6, 6)).getdata())
+        patch = im.crop(bx).resize((6, 6))
+        px = list(patch.get_flattened_data()) if hasattr(patch, "get_flattened_data") else list(patch.getdata())
         m = tuple(sum(c[i] for c in px) / len(px) for i in range(3))
         means.append(m)
         spreads.append((sum(sum((c[i] - m[i]) ** 2 for i in range(3)) / 3 for c in px) / len(px)) ** 0.5)
     avg = tuple(sum(m[i] for m in means) / 4 for i in range(3))
     apart = max(max(abs(m[i] - avg[i]) for i in range(3)) for m in means)
-    flat = apart < 16 and max(spreads) < 14
-    rgb = tuple(int(round(x)) for x in avg)
-    if min(rgb) >= 244:
-        rgb = (255, 255, 255)
-    return flat, "#%02x%02x%02x" % rgb
+    return apart < 16 and max(spreads) < 14, avg
 
-def save_image(src, width, name, folder, quality=80):
-    """Download at width, convert to WebP. Returns (relative path, flat, bg)."""
-    raw = cached(sized(src, width))
+def content_box(im, avg, tol=14, n=128):
+    """Bounding box of everything that is not backdrop, and how full that box is.
+    A studio shot fills well under 80% of its box; a photo inside a white frame fills over 90%."""
+    t = im.resize((n, n))
+    px = list(t.get_flattened_data()) if hasattr(t, "get_flattened_data") else list(t.getdata())
+    pts = [k for k, c in enumerate(px) if any(abs(c[i] - avg[i]) >= tol for i in range(3))]
+    if not pts:
+        return None
+    xs = [k % n for k in pts]; ys = [k // n for k in pts]
+    x0, x1, y0, y1 = min(xs), max(xs) + 1, min(ys), max(ys) + 1
+    w, h = im.size
+    return {"fill": len(pts) / ((x1 - x0) * (y1 - y0)),
+            "crop": (int(x0 * w / n), int(y0 * h / n), min(w, int(x1 * w / n) + 1), min(h, int(y1 * h / n) + 1))}
+
+def save_product(src, name, folder):
+    """Studio shots on a white backdrop are re-toned onto the tile color so they sit on it seamlessly.
+    Anything with a real background (a scene, or a colored backdrop) is kept as a photo.
+    Returns (relative path, kind) with kind 'clean' or 'photo'."""
+    raw = cached(sized(src, PHOTO_W))
     if Image is None:
         ext = os.path.splitext(urllib.parse.urlsplit(src).path)[1].lower() or ".jpg"
         (folder / (name + ext)).write_bytes(raw)
-        return f"images/{name}{ext}", True, "#ffffff"
+        return f"images/{name}{ext}", "clean"
+    im = to_rgb(Image.open(io.BytesIO(raw)))
+    flat, avg = edge_info(im)
+    box = None
+    if flat and min(avg) >= 232:
+        box = content_box(im, avg)
+    if box and box["fill"] >= 0.9:
+        # a photo sitting inside a white frame: trim the frame and treat it as a photo
+        im = im.crop(box["crop"])
+        flat = False
+    if flat and min(avg) >= 232:
+        chans = [c.point([min(255, int(v * t / max(a, 1) + .5)) for v in range(256)]) for c, a, t in zip(im.split(), avg, TILE)]
+        im = Image.merge("RGB", chans)
+        im.thumbnail((CLEAN_W, CLEAN_W), Image.LANCZOS)
+        kind = "clean"
+    else:
+        if im.width > PHOTO_W:
+            im = im.resize((PHOTO_W, round(im.height * PHOTO_W / im.width)), Image.LANCZOS)
+        kind = "photo"
+    im.save(folder / (name + ".webp"), "WEBP", quality=80, method=4)
+    return f"images/{name}.webp", kind
+
+def save_hero(src, width, name, folder, quality=82):
+    raw = cached(sized(src, width))
     im = to_rgb(Image.open(io.BytesIO(raw)))
     if im.width > width:
         im = im.resize((width, round(im.height * width / im.width)), Image.LANCZOS)
-    flat, bg = edge_info(im)
     im.save(folder / (name + ".webp"), "WEBP", quality=quality, method=4)
-    return f"images/{name}.webp", flat, bg
+    return f"images/{name}.webp"
 
 # ---------------- page builders ----------------
 E = lambda s: html.escape(str(s), quote=True)
@@ -234,26 +272,22 @@ def meta_html(it):
             bits.append(f'<b>{money(it["min"])}</b>')
     if it["colors"] > 1:
         bits.append(f'<span>{it["colors"]} colors</span>')
-    return f'<p class="meta">{"".join(bits)}</p>' if bits else ""
+    return f'<p class="meta">{"".join(bits)}</p>' if bits else '<p class="meta"></p>'
 
-def photo(it, big=False):
-    if not it.get("local"):
-        return '<div class="ph" style="background:#f3f3f0"><span class="noimg">Photo online</span></div>'
-    fit = "contain" if it.get("flat") else "cover"
-    return (f'<div class="ph {fit}" style="background:{it["bg"] if it.get("flat") else "#eee"}">'
-            f'<img src="{E(it["local"])}" alt="{E(it["title"])}" loading="lazy" decoding="async"></div>')
+def img_tag(it):
+    if it.get("local"):
+        return f'<img src="{E(it["local"])}" alt="{E(it["title"])}" loading="lazy" decoding="async">'
+    return '<span class="noimg">Photo online</span>'
 
 def card(it):
-    return (f'<a class="card" href="{E(link(it["handle"]))}" target="_blank" rel="noopener">{photo(it)}'
-            f'<h3>{E(it["title"])}</h3>{meta_html(it)}</a>')
+    href = f'href="{E(link(it["handle"]))}" target="_blank" rel="noopener"'
+    text = f'<h3>{E(it["title"])}</h3><div class="row">{meta_html(it)}<span class="go">View on duraweather.com</span></div>'
+    if it.get("kind") == "photo":
+        return f'<a class="card shot" {href}>{img_tag(it)}<div class="cap">{text}</div></a>'
+    return f'<a class="card" {href}><div class="tile">{img_tag(it)}</div><div class="ct">{text}</div></a>'
 
-def feature_page(it, section, kicker="Featured"):
-    return (f'<div class="pad feat"><p class="eyebrow">{E(section)}<i></i>{E(kicker)}</p>'
-            f'<a class="fcard" href="{E(link(it["handle"]))}" target="_blank" rel="noopener">{photo(it, True)}'
-            f'<h3>{E(it["title"])}</h3>{meta_html(it)}<span class="go">View colors &amp; order</span></a></div>')
-
-def grid_page(chunk, section):
-    cls = "r2" if len(chunk) <= 4 else "r3"
+def grid_page(chunk, section, kind):
+    cls = ("s" if kind == "photo" else "c") + ("1" if len(chunk) == 1 else "4")
     return (f'<div class="pad"><p class="eyebrow">{E(section)}</p>'
             f'<div class="grid {cls}">{"".join(card(c) for c in chunk)}</div></div>')
 
@@ -266,12 +300,38 @@ def split_even(items, k):
         out.append(items[i:i + n]); i += n
     return out
 
-def split_section(its):
-    """Pieces shown large on their own page vs. pieces on grid pages."""
-    if len(its) < FEATURE_MIN:
-        return list(its), []
-    best = sorted(range(len(its)), key=lambda i: (-its[i]["nimg"], i))[:2]
-    return [its[i] for i in sorted(best)], [x for i, x in enumerate(its) if i not in best]
+def split_fill(items, k, cap):
+    """Fill pages to the limit so every page looks the same, and keep the last page from holding a single piece."""
+    n = len(items)
+    if k * cap < n or k == 1:
+        sizes = [n]
+    else:
+        sizes = None
+        if -(-n // cap) == k:
+            rem = n - cap * (k - 1)
+            sizes = [cap] * (k - 1) + [rem]
+            if rem == 1 and k >= 2 and cap > 2:
+                sizes[-2:] = [cap - 1, 2]
+    if sizes is None or len(sizes) != k:
+        return split_even(items, k)
+    out, i = [], 0
+    for z in sizes:
+        out.append(items[i:i + z]); i += z
+    return out
+
+def paginate(its):
+    """Photos with a real background get their own large pages, then the studio shots follow.
+    Returns (list of (kind, chunk), needs_closer)."""
+    photos = [i for i in its if i.get("kind") == "photo"]
+    clean = [i for i in its if i.get("kind") != "photo"]
+    kp, kg = -(-len(photos) // PHOTO_PER_PAGE), -(-len(clean) // CLEAN_PER_PAGE)
+    closer = False
+    pages = []
+    if kp:
+        pages += [("photo", c) for c in split_fill(photos, kp, PHOTO_PER_PAGE)]
+    if kg:
+        pages += [("clean", c) for c in split_fill(clean, kg, CLEAN_PER_PAGE)]
+    return pages, closer
 
 def hero_pages(section, img, count, lo):
     """A full-bleed two-page opener. The same photo spans both pages."""
@@ -323,23 +383,17 @@ def build_pages(items, imgs, build_date):
         toc.append((name, start, len(its)))
         l, r = hero_pages(name, imgs.get(name), len(its), lo)
         A((name, l, "hero")); A((name, r, "hero"))
-        feats, rest = split_section(its)
-        for f in feats:
-            A((name, feature_page(f, name), "inner"))
-        if rest:
-            k = -(-len(rest) // PER_PAGE)
-            if k % 2 and len(rest) >= 3 * (k + 1):   # an even page count keeps the next opener on a left page
-                k += 1
-            for chunk in split_even(rest, k):
-                A((name, grid_page(chunk, name), "inner"))
-        if (len(pages) + 1) % 2 != 0:   # still odd: close the section with a photo page
+        pgs, closer = paginate(its)
+        for kind, chunk in pgs:
+            A((name, grid_page(chunk, name, kind), "inner"))
+        if closer or (len(pages) + 1) % 2 != 0:   # keep the next opener on a left page
             pic = f'<img class="bleed" src="{E(imgs[name])}" alt="">' if imgs.get(name) else ""
-            A((name, f'<div class="closer">{pic}<div class="scrim"></div><div class="htxt"><p class="lede w">Every piece links to its page on duraweather.com, with all colors and options.</p></div></div>', "hero"))
+            A((name, f'<div class="closer">{pic}</div>', "hero"))
 
     rows = "".join(f'<a class="toc" data-go="{p}" href="#p{p}"><span class="tn">{E(n)}</span>'
                    f'<span class="tc">{c} piece{"s" if c != 1 else ""}</span><span class="tp">{p:02d}</span></a>' for n, p, c in toc)
     pages[2] = ("Contents", f'''<div class="pad"><p class="eyebrow">Contents</p><h2>Inside</h2>
-      <p class="intro">Tap any piece to see every color and option, and to order on duraweather.com.</p>
+      <p class="intro">Tap any photo to see every color and option on duraweather.com.</p>
       <div class="tocs">{rows}</div></div>''', "inner")
 
     note = f"Prices as of {build_date}. " if SHOW_PRICES else ""
@@ -348,10 +402,10 @@ def build_pages(items, imgs, build_date):
         A(("Notes", '<div class="pad"><p class="eyebrow">Notes</p></div>', "inner"))
     A(("Back", f'''<div class="back"><p class="mark">DURAWEATHER<sup>&reg;</sup></p>
       <h1>See every color online.</h1>
-      <p class="lede w">Each piece links to its page on duraweather.com, with current colors, options and pricing.</p>
+      <p class="lede w">Each piece links to its page on duraweather.com, with current colors and options.</p>
       <a class="big" href="{STORE}/collections/{COLLECTION}?{UTM}" target="_blank" rel="noopener">duraweather.com</a>
       <p class="ph2">Questions? Call 252-512-4191</p>
-      <p class="fine">{note}Colors, availability and prices may change. Visit duraweather.com for current details. &copy; {datetime.date.today().year} DuraWeather.</p></div>''', "back"))
+      <p class="fine">{note}Colors and availability may change. Visit duraweather.com for current details. &copy; {datetime.date.today().year} DuraWeather.</p></div>''', "back"))
 
     final = []
     for i, (label, body, kind) in enumerate(pages, 1):
@@ -448,23 +502,29 @@ footer button{font:inherit;font-size:13px;color:var(--chrome);background:transpa
 .hero .htxt.r{display:flex;align-items:flex-end;justify-content:flex-start}.hero .htxt.r .lede{font-size:22u;max-width:440u;margin-left:0}
 .hero.plain{background:linear-gradient(135deg,#1d3128,#0f1a14)}
 .closer{position:absolute;inset:0;background:var(--spruce);overflow:hidden}.closer .bleed{width:200%;left:-100%}.closer .htxt{position:absolute;left:64u;right:64u;bottom:76u}.closer .lede{font-size:20u;max-width:420u}
-/* product pages */
-.grid{display:grid;grid-template-columns:1fr 1fr;gap:26u 32u;margin-top:26u;height:calc(var(--u)*846)}
-.grid.r3{grid-template-rows:repeat(3,1fr)}.grid.r2{grid-template-rows:repeat(2,1fr);height:calc(var(--u)*740)}
-.card{display:flex;flex-direction:column;min-height:0}
-.ph{position:relative;overflow:hidden;border-radius:2u;flex:1;min-height:0}
-.ph img{position:absolute;inset:0;width:100%;height:100%}.ph.contain img{object-fit:contain;padding:5%}.ph.cover img{object-fit:cover}
+/* product pages: studio shots sit on a tile, photos with a real background run large with the title over them */
+.grid{display:grid;gap:28u 30u;margin-top:26u;height:calc(var(--u)*856)}
+.grid.c4{grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr}
+.grid.s2{grid-template-columns:1fr;grid-template-rows:1fr 1fr}
+.grid.c1{grid-template-columns:1fr;grid-template-rows:1fr;height:calc(var(--u)*700)}.grid.s1{grid-template-columns:1fr;grid-template-rows:1fr}
+.card{display:flex;flex-direction:column;min-height:0;position:relative}
+.tile{flex:1;min-height:0;position:relative;overflow:hidden;background:#efefeb;border-radius:2u}
+.tile img,.shot img{position:absolute;inset:0;width:100%;height:100%;transition:transform .6s cubic-bezier(.2,.6,.2,1)}
+.tile img{object-fit:contain;padding:7%}.shot img{object-fit:cover}
+.card:hover .tile img,.card.shot:hover img{transform:scale(1.035)}
 .noimg{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:13u;color:var(--soft)}
-.card h3{font-size:18u;line-height:1.25;font-weight:600;margin-top:12u;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;min-height:calc(var(--u)*45)}
-.meta{font-size:15.5u;color:var(--soft);margin-top:4u;display:flex;gap:10u;align-items:baseline;flex-wrap:wrap}.meta b{color:var(--ink);font-weight:600}
-.meta span::before{content:"\00b7";margin-right:10u}
-.card:hover h3,.fcard:hover h3{color:var(--brass)}
-/* feature pages */
-.feat .fcard{display:flex;flex-direction:column;margin-top:30u;height:calc(var(--u)*840)}
-.feat .ph{flex:none;height:calc(var(--u)*640)}
-.feat h3{font-family:"Cormorant Garamond",Georgia,serif;font-size:46u;line-height:1.05;font-weight:600;margin-top:26u;min-height:0;display:block;-webkit-line-clamp:unset}
-.feat .meta{font-size:19u;margin-top:10u}
-.go{align-self:flex-start;font-size:14.5u;font-weight:600;color:var(--ink);border-bottom:1px solid var(--brass);padding-bottom:2u;margin-top:16u}
+.ct{flex:none;height:calc(var(--u)*128);padding-top:14u;display:flex;flex-direction:column}
+.card h3{font-family:"Cormorant Garamond",Georgia,serif;font-size:25u;line-height:1.1;font-weight:600;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.row{display:flex;justify-content:space-between;align-items:baseline;gap:14u;margin-top:auto;padding-bottom:2u}
+.meta{font-size:15u;color:var(--soft);min-height:1em}
+.go{font-size:13.5u;font-weight:600;color:var(--ink);border-bottom:1px solid var(--brass);padding-bottom:1u;white-space:nowrap}
+.card:hover h3{color:var(--brass)}
+.shot{background:#222;border-radius:2u;overflow:hidden}
+.shot::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(11,20,15,.78) 0,rgba(11,20,15,.35) 34%,rgba(11,20,15,0) 58%)}
+.shot .cap{position:absolute;left:30u;right:30u;bottom:26u;z-index:2}
+.shot h3{font-size:36u;color:#fff;-webkit-line-clamp:2}.shot .row{margin-top:8u}
+.shot .meta{color:rgba(255,255,255,.86)}.shot .go{color:#fff;border-color:rgba(255,255,255,.7)}
+.shot:hover h3{color:#fff}
 /* back cover */
 .back{position:absolute;inset:0;background:var(--spruce);color:#DDE5E0;padding:150u 80u}
 .back .mark{margin-bottom:140u}.back h1{color:#fff;font-size:76u;line-height:1;font-weight:500;max-width:560u;margin-bottom:22u}
@@ -580,24 +640,22 @@ def main(products=None):
     folder.mkdir(parents=True)
 
     print("Photos for each piece ...")
-    featured = {}
-    groups = {}
-    for it in items:
-        groups.setdefault(it["section"], []).append(it)
-    for sec, its in groups.items():
-        for f in split_section(its)[0]:
-            featured[f["handle"]] = True
     fails = 0
     for n, it in enumerate(items, 1):
         if not it["img"]:
-            it["local"] = None; fails += 1; continue
+            it["local"], it["kind"] = None, "clean"; fails += 1; continue
         try:
-            w = FEATURE_W if it["handle"] in featured else CARD_W
-            it["local"], it["flat"], it["bg"] = save_image(it["img"], w, slug(it["handle"]), folder)
+            it["local"], it["kind"] = save_product(it["img"], slug(it["handle"]), folder)
         except Exception as e:
-            print(f"  image failed: {it['title']} ({e})"); it["local"] = None; fails += 1
+            print(f"  image failed: {it['title']} ({e})"); it["local"], it["kind"] = None, "clean"; fails += 1
         if n % 25 == 0:
             print(f"  {n}/{len(items)}")
+    nphoto = sum(1 for i in items if i["kind"] == "photo")
+    print(f"  {nphoto} photos with a background, {len(items) - nphoto} studio shots")
+
+    groups = {}
+    for it in items:
+        groups.setdefault(it["section"], []).append(it)
 
     print("Hero photos ...")
     imgs = {}
@@ -611,7 +669,7 @@ def main(products=None):
             if not src:
                 print(f"  not found: {key} ({name})"); continue
             try:
-                imgs[key] = save_image(src, HERO_W if key != "INTRO" else 1400, "hero-" + slug(key), folder, quality=82)[0]
+                imgs[key] = save_hero(src, HERO_W if key != "INTRO" else 1400, "hero-" + slug(key), folder)
             except Exception as e:
                 print(f"  hero failed: {key} ({e})")
 

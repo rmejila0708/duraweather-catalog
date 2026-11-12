@@ -10,8 +10,7 @@
   "colors": 3,
   "section": "Dining",
   "local": "images/patio-furniture-9pc-extension-outdoor-dining-set.webp",
-  "flat": true,
-  "bg": "#ffffff"
+  "kind": "clean"
  },
  {
   "handle": "folding-poly-adirondack-chair-with-collapsible-cup-holders-and-footrest",
@@ -24,12 +23,11 @@
   "colors": 5,
   "section": "Accessories",
   "local": "images/folding-poly-adirondack-chair-with-collapsible-cup-holders-and-footres.webp",
-  "flat": true,
-  "bg": "#ffffff"
+  "kind": "clean"
  },
  {
   "handle": "patio-furniture-bistro-set-counter-height",
-  "title": "Counter Height Bistro Tete-a-tete With Cupholders",
+  "title": "Counter Height Bistro Tete-a-tete with Cupholders",
   "raw_title": "Counter Height Bistro Tete-a-tete With Cupholders",
   "min": 879.0,
   "max": 879.0,
@@ -38,12 +36,11 @@
   "colors": 5,
   "section": "Counter & bar",
   "local": "images/patio-furniture-bistro-set-counter-height.webp",
-  "flat": true,
-  "bg": "#ffffff"
+  "kind": "clean"
  },
  {
   "handle": "patio-furniture-porch-rocker-poly",
-  "title": "Adirondack Porch Rocker With Wine & Cup Holders",
+  "title": "Adirondack Porch Rocker with Wine & Cup Holders",
   "raw_title": "Adirondack Porch Rocker With Wine & Cup Holders",
   "min": 349.0,
   "max": 349.0,
@@ -52,8 +49,7 @@
   "colors": 2,
   "section": "Rockers",
   "local": "images/patio-furniture-porch-rocker-poly.webp",
-  "flat": true,
-  "bg": "#ffffff"
+  "kind": "clean"
  },
  {
   "handle": "patio-furniture-5pc-outdoor-dining-set",
@@ -66,8 +62,7 @@
   "colors": 0,
   "section": "Dining",
   "local": "images/patio-furniture-5pc-outdoor-dining-set.webp",
-  "flat": true,
-  "bg": "#ffffff"
+  "kind": "clean"
  },
  {
   "handle": "patio-furniture-5pc-outdoor-counter-set",
@@ -80,8 +75,7 @@
   "colors": 1,
   "section": "Counter & bar",
   "local": "images/patio-furniture-5pc-outdoor-counter-set.webp",
-  "flat": true,
-  "bg": "#ffffff"
+  "kind": "clean"
  },
  {
   "handle": "presidential-porch-rocker",
@@ -94,8 +88,7 @@
   "colors": 1,
   "section": "Rockers",
   "local": "images/presidential-porch-rocker.webp",
-  "flat": true,
-  "bg": "#ffffff"
+  "kind": "clean"
  },
  {
   "handle": "9-piece-extension-adirondack-counter-height-table-set",
@@ -108,8 +101,7 @@
   "colors": 1,
   "section": "Counter & bar",
   "local": "images/9-piece-extension-adirondack-counter-height-table-set.webp",
-  "flat": true,
-  "bg": "#ffffff"
+  "kind": "clean"
  },
  {
   "handle": "5-piece-brookshire-outdoor-dining-set",
@@ -122,8 +114,7 @@
   "colors": 3,
   "section": "Dining",
   "local": "images/5-piece-brookshire-outdoor-dining-set.webp",
-  "flat": true,
-  "bg": "#ffffff"
+  "kind": "clean"
  },
  {
   "handle": "duraweather-poly\u00ae-5-piece-brookshire-counter-height-dining-table-set",
@@ -136,12 +127,11 @@
   "colors": 3,
   "section": "Counter & bar",
   "local": "images/duraweather-poly--5-piece-brookshire-counter-height-dining-table-set.webp",
-  "flat": true,
-  "bg": "#ffffff"
+  "kind": "clean"
  },
  {
   "handle": "patio-furniture-5pc-outdoor-poly-dining-set-savannah",
-  "title": "5-Piece Savannah Dining Table Set With Folding & Reclining Chairs",
+  "title": "5-Piece Savannah Dining Table Set with Folding & Reclining Chairs",
   "raw_title": "5-Piece Savannah Dining Table Set With Folding & Reclining Chairs",
   "min": 3299.0,
   "max": 3299.0,
@@ -150,12 +140,11 @@
   "colors": 3,
   "section": "Dining",
   "local": "images/patio-furniture-5pc-outdoor-poly-dining-set-savannah.webp",
-  "flat": true,
-  "bg": "#ffffff"
+  "kind": "clean"
  },
  {
   "handle": "patio-furniture-chaise-lounge-with-adjustable-back-wheels-free-cushion",
-  "title": "Chaise Lounge With Adjustable Back, Wheels, & Free Cushion",
+  "title": "Chaise Lounge with Adjustable Back, Wheels, & Free Cushion",
   "raw_title": "Chaise Lounge With Adjustable Back, Wheels, & Free Cushion",
   "min": 899.0,
   "max": 899.0,
@@ -164,12 +153,11 @@
   "colors": 0,
   "section": "Lounge & chaise",
   "local": "images/patio-furniture-chaise-lounge-with-adjustable-back-wheels-free-cushion.webp",
-  "flat": false,
-  "bg": "#ffffff"
+  "kind": "photo"
  },
  {
   "handle": "chaise-lounge-with-wheels",
-  "title": "Chaise Lounge With Wheels And Adjustable Back",
+  "title": "Chaise Lounge with Wheels and Adjustable Back",
   "raw_title": "Chaise Lounge With Wheels And Adjustable Back",
   "min": 879.0,
   "max": 879.0,
@@ -178,8 +166,7 @@
   "colors": 3,
   "section": "Lounge & chaise",
   "local": "images/chaise-lounge-with-wheels.webp",
-  "flat": false,
-  "bg": "#e8e8e8"
+  "kind": "photo"
  },
  {
   "handle": "mayfair-outdoor-lounge-chair-sunbrella\u00ae-fabric",
@@ -192,8 +179,7 @@
   "colors": 21,
   "section": "Lounge & chaise",
   "local": "images/mayfair-outdoor-lounge-chair-sunbrella--fabric.webp",
-  "flat": false,
-  "bg": "#bac0b9"
+  "kind": "photo"
  },
  {
   "handle": "3-piece-original-chat-bistro-set",
@@ -206,8 +192,7 @@
   "colors": 1,
   "section": "Lounge & chaise",
   "local": "images/3-piece-original-chat-bistro-set.webp",
-  "flat": true,
-  "bg": "#ffffff"
+  "kind": "clean"
  },
  {
   "handle": "15-square-side-table",
@@ -220,8 +205,7 @@
   "colors": 1,
   "section": "Accessories",
   "local": "images/15-square-side-table.webp",
-  "flat": true,
-  "bg": "#ffffff"
+  "kind": "clean"
  },
  {
   "handle": "duraweather-poly-reg-upright-adirondack-counter-3pc-bistro-set",
@@ -234,8 +218,7 @@
   "colors": 2,
   "section": "Rockers",
   "local": "images/duraweather-poly-reg-upright-adirondack-counter-3pc-bistro-set.webp",
-  "flat": false,
-  "bg": "#959c8b"
+  "kind": "photo"
  },
  {
   "handle": "mayfair-outdoor-sofa-sunbrella\u00ae-fabric",
@@ -248,8 +231,7 @@
   "colors": 25,
   "section": "Lounge & chaise",
   "local": "images/mayfair-outdoor-sofa-sunbrella--fabric.webp",
-  "flat": false,
-  "bg": "#8d9bae"
+  "kind": "photo"
  },
  {
   "handle": "mayfair-outdoor-sofa-sunbrella\u00ae-fabric-1",
@@ -262,8 +244,7 @@
   "colors": 25,
   "section": "Lounge & chaise",
   "local": "images/mayfair-outdoor-sofa-sunbrella--fabric-1.webp",
-  "flat": false,
-  "bg": "#969271"
+  "kind": "photo"
  },
  {
   "handle": "breeze-outdoor-lounge-chairs-set-sunbrella\u00ae-fabric",
@@ -276,8 +257,7 @@
   "colors": 21,
   "section": "Lounge & chaise",
   "local": "images/breeze-outdoor-lounge-chairs-set-sunbrella--fabric.webp",
-  "flat": false,
-  "bg": "#3b4023"
+  "kind": "photo"
  },
  {
   "handle": "duraweather-poly-reg-princeton-estates-sofa-white-frame-on-sunbrella\u00ae-canvas-aruba-fabric",
@@ -290,8 +270,7 @@
   "colors": 6,
   "section": "Lounge & chaise",
   "local": "images/duraweather-poly-reg-princeton-estates-sofa-white-frame-on-sunbrella--.webp",
-  "flat": false,
-  "bg": "#99a9b9"
+  "kind": "photo"
  },
  {
   "handle": "mayfair-right-arm-sectional-chair-sunbrella\u00ae-fabric",
@@ -304,8 +283,7 @@
   "colors": 38,
   "section": "Lounge & chaise",
   "local": "images/mayfair-right-arm-sectional-chair-sunbrella--fabric.webp",
-  "flat": true,
-  "bg": "#ffffff"
+  "kind": "clean"
  },
  {
   "handle": "mayfair-middle-sectional-chair-sunbrella\u00ae-fabric",
@@ -318,8 +296,7 @@
   "colors": 37,
   "section": "Lounge & chaise",
   "local": "images/mayfair-middle-sectional-chair-sunbrella--fabric.webp",
-  "flat": true,
-  "bg": "#ffffff"
+  "kind": "clean"
  },
  {
   "handle": "13-piece-mayfair-ultimate-outdoor-sectional-sunbrella\u00ae-fabric-copy",
@@ -332,8 +309,7 @@
   "colors": 38,
   "section": "Lounge & chaise",
   "local": "images/13-piece-mayfair-ultimate-outdoor-sectional-sunbrella--fabric-copy.webp",
-  "flat": true,
-  "bg": "#ffffff"
+  "kind": "clean"
  },
  {
   "handle": "9-piece-breeze-outdoor-sectional-sunbrella\u00ae-fabric",
@@ -346,8 +322,7 @@
   "colors": 17,
   "section": "Lounge & chaise",
   "local": "images/9-piece-breeze-outdoor-sectional-sunbrella--fabric.webp",
-  "flat": false,
-  "bg": "#969489"
+  "kind": "photo"
  },
  {
   "handle": "lakeside-counter-swivel-adirondack-chair",
@@ -360,12 +335,11 @@
   "colors": 41,
   "section": "Counter & bar",
   "local": "images/lakeside-counter-swivel-adirondack-chair.webp",
-  "flat": false,
-  "bg": "#837b68"
+  "kind": "photo"
  },
  {
   "handle": "duraweather-poly\u00ae-classic-folding-end-table-20x16-with-removable-serving-tray",
-  "title": "Folding Side Table With Removable Serving Tray - Ships Fully Assembled",
+  "title": "Folding Side Table with Removable Serving Tray - Ships Fully Assembled",
   "raw_title": "Folding Side Table With Removable Serving Tray - Ships Fully Assembled",
   "min": 179.0,
   "max": 179.0,
@@ -374,8 +348,7 @@
   "colors": 3,
   "section": "Accessories",
   "local": "images/duraweather-poly--classic-folding-end-table-20x16-with-removable-servi.webp",
-  "flat": true,
-  "bg": "#ffffff"
+  "kind": "clean"
  },
  {
   "handle": "22-sq-two-tier-side-table",
@@ -388,8 +361,7 @@
   "colors": 56,
   "section": "Accessories",
   "local": "images/22-sq-two-tier-side-table.webp",
-  "flat": true,
-  "bg": "#ffffff"
+  "kind": "clean"
  },
  {
   "handle": "original-large-plush-pillowtop-hammock",
@@ -402,8 +374,7 @@
   "colors": 25,
   "section": "Accessories",
   "local": "images/original-large-plush-pillowtop-hammock.webp",
-  "flat": false,
-  "bg": "#a1988d"
+  "kind": "photo"
  },
  {
   "handle": "original-large-plush-pillowtop-hammock-1",
@@ -416,8 +387,7 @@
   "colors": 24,
   "section": "Accessories",
   "local": "images/original-large-plush-pillowtop-hammock-1.webp",
-  "flat": true,
-  "bg": "#ffffff"
+  "kind": "clean"
  },
  {
   "handle": "9-push-button-tilt-octagon-umbrella",
@@ -430,8 +400,7 @@
   "colors": 6,
   "section": "Accessories",
   "local": "images/9-push-button-tilt-octagon-umbrella.webp",
-  "flat": true,
-  "bg": "#ffffff"
+  "kind": "clean"
  },
  {
   "handle": "polywood-folding-adirondack-chair-7",
@@ -444,8 +413,7 @@
   "colors": 31,
   "section": "Adirondack chairs",
   "local": "images/polywood-folding-adirondack-chair-7.webp",
-  "flat": true,
-  "bg": "#ffffff"
+  "kind": "clean"
  },
  {
   "handle": "folding-premium-poly-adirondack-chairs-set-of-four",
@@ -458,8 +426,7 @@
   "colors": 38,
   "section": "Adirondack chairs",
   "local": "images/folding-premium-poly-adirondack-chairs-set-of-four.webp",
-  "flat": true,
-  "bg": "#ffffff"
+  "kind": "clean"
  },
  {
   "handle": "folding-poly-adirondack-chair-king-size-set-of-6",
@@ -472,12 +439,11 @@
   "colors": 35,
   "section": "Adirondack chairs",
   "local": "images/folding-poly-adirondack-chair-king-size-set-of-6.webp",
-  "flat": true,
-  "bg": "#ffffff"
+  "kind": "photo"
  },
  {
   "handle": "folding-adirondack-chair-with-built-in-cup-holders",
-  "title": "Folding Adirondack Chair With Built-in Cup Holders King-Size",
+  "title": "Folding Adirondack Chair with Built-in Cup Holders King-Size",
   "raw_title": "Folding Adirondack Chair With Built-in Cup Holders King-Size",
   "min": 439.0,
   "max": 479.0,
@@ -486,12 +452,11 @@
   "colors": 27,
   "section": "Adirondack chairs",
   "local": "images/folding-adirondack-chair-with-built-in-cup-holders.webp",
-  "flat": true,
-  "bg": "#ffffff"
+  "kind": "clean"
  },
  {
   "handle": "set-of-4-king-size-folding-adirondack-chairs",
-  "title": "Set of 4 Folding Adirondack Chairs With Built-in Cup Holders King Size",
+  "title": "Set of 4 Folding Adirondack Chairs with Built-in Cup Holders King Size",
   "raw_title": "Set of 4 Folding Adirondack Chairs With Built-in Cup Holders King Size",
   "min": 1739.0,
   "max": 1899.0,
@@ -500,12 +465,11 @@
   "colors": 29,
   "section": "Adirondack chairs",
   "local": "images/set-of-4-king-size-folding-adirondack-chairs.webp",
-  "flat": true,
-  "bg": "#ffffff"
+  "kind": "clean"
  },
  {
   "handle": "set-of-6-king-size-folding-adirondack-chair-with-built-in-cup-holders-30-color-options",
-  "title": "Set of 6 Folding Adirondack Chairs With Built-in Cup Holders King-Size",
+  "title": "Set of 6 Folding Adirondack Chairs with Built-in Cup Holders King-Size",
   "raw_title": "Set of 6 Folding Adirondack Chairs With Built-in Cup Holders King-Size",
   "min": 2569.0,
   "max": 2799.0,
@@ -514,12 +478,11 @@
   "colors": 29,
   "section": "Adirondack chairs",
   "local": "images/set-of-6-king-size-folding-adirondack-chair-with-built-in-cup-holders-.webp",
-  "flat": true,
-  "bg": "#ffffff"
+  "kind": "clean"
  },
  {
   "handle": "3-piece-adirondack-swivel-gliders-with-end-table",
-  "title": "3-Piece Adirondack Swivel Gliders With Two Tier End Table",
+  "title": "3-Piece Adirondack Swivel Gliders with Two Tier End Table",
   "raw_title": "3-Piece Adirondack Swivel Gliders With Two Tier End Table",
   "min": 1999.0,
   "max": 1999.0,
@@ -528,8 +491,7 @@
   "colors": 34,
   "section": "Gliders, benches & swings",
   "local": "images/3-piece-adirondack-swivel-gliders-with-end-table.webp",
-  "flat": false,
-  "bg": "#4a4b3d"
+  "kind": "photo"
  },
  {
   "handle": "quick-ship-duraweather-poly-reg-18-round-two-tier-end-table",
@@ -542,8 +504,7 @@
   "colors": 55,
   "section": "Accessories",
   "local": "images/quick-ship-duraweather-poly-reg-18-round-two-tier-end-table.webp",
-  "flat": true,
-  "bg": "#ffffff"
+  "kind": "clean"
  },
  {
   "handle": "king-size-stationary-adirondack-chair",
@@ -556,8 +517,7 @@
   "colors": 10,
   "section": "Adirondack chairs",
   "local": "images/king-size-stationary-adirondack-chair.webp",
-  "flat": true,
-  "bg": "#ffffff"
+  "kind": "clean"
  },
  {
   "handle": "duraweather-poly\u00ae-lakeside-counter-height-tete-a-tete",
@@ -570,8 +530,7 @@
   "colors": 30,
   "section": "Counter & bar",
   "local": "images/duraweather-poly--lakeside-counter-height-tete-a-tete.webp",
-  "flat": true,
-  "bg": "#ffffff"
+  "kind": "clean"
  },
  {
   "handle": "ottoman-footrest",
@@ -584,8 +543,7 @@
   "colors": 7,
   "section": "Accessories",
   "local": "images/ottoman-footrest.webp",
-  "flat": false,
-  "bg": "#e0d9d3"
+  "kind": "photo"
  },
  {
   "handle": "duraweather-poly-reg-3-pc-30rd-classic-adirondack-set",
@@ -598,8 +556,7 @@
   "colors": 10,
   "section": "Dining",
   "local": "images/duraweather-poly-reg-3-pc-30rd-classic-adirondack-set.webp",
-  "flat": true,
-  "bg": "#ffffff"
+  "kind": "clean"
  },
  {
   "handle": "7-pc-hampton-adirondack-dining-table-set",
@@ -612,8 +569,7 @@
   "colors": 13,
   "section": "Dining",
   "local": "images/7-pc-hampton-adirondack-dining-table-set.webp",
-  "flat": false,
-  "bg": "#8e9194"
+  "kind": "photo"
  },
  {
   "handle": "set-of-8-duraweather-reg-polywood-folding-adirondack-chairs",
@@ -626,12 +582,11 @@
   "colors": 34,
   "section": "Adirondack chairs",
   "local": "images/set-of-8-duraweather-reg-polywood-folding-adirondack-chairs.webp",
-  "flat": true,
-  "bg": "#ffffff"
+  "kind": "clean"
  },
  {
   "handle": "set-of-8-king-size-folding-adirondack-chair-with-built-in-cup-holders",
-  "title": "Set of 8 Folding Adirondack Chairs With Built-in Cup Holders King-Size",
+  "title": "Set of 8 Folding Adirondack Chairs with Built-in Cup Holders King-Size",
   "raw_title": "Set of 8 Folding Adirondack Chairs With Built-in Cup Holders King-Size",
   "min": 3379.0,
   "max": 3689.0,
@@ -640,8 +595,7 @@
   "colors": 29,
   "section": "Adirondack chairs",
   "local": "images/set-of-8-king-size-folding-adirondack-chair-with-built-in-cup-holders.webp",
-  "flat": true,
-  "bg": "#ffffff"
+  "kind": "clean"
  },
  {
   "handle": "adirondack-loveseat-double-glider",
@@ -654,8 +608,7 @@
   "colors": 8,
   "section": "Dining",
   "local": "images/adirondack-loveseat-double-glider.webp",
-  "flat": false,
-  "bg": "#b2bcc0"
+  "kind": "photo"
  },
  {
   "handle": "quick-ship-duraweather-poly\u00ae-5-piece-46rd-lakeside-adirondack-dining-set",
@@ -668,8 +621,7 @@
   "colors": 30,
   "section": "Dining",
   "local": "images/quick-ship-duraweather-poly--5-piece-46rd-lakeside-adirondack-dining-s.webp",
-  "flat": true,
-  "bg": "#ffffff"
+  "kind": "clean"
  },
  {
   "handle": "3-piece-beverly-dining-table-set-1",
@@ -682,8 +634,7 @@
   "colors": 13,
   "section": "Dining",
   "local": "images/3-piece-beverly-dining-table-set-1.webp",
-  "flat": true,
-  "bg": "#ffffff"
+  "kind": "clean"
  },
  {
   "handle": "7-piece-beverly-dining-table-set-copy",
@@ -696,8 +647,7 @@
   "colors": 13,
   "section": "Dining",
   "local": "images/7-piece-beverly-dining-table-set-copy.webp",
-  "flat": true,
-  "bg": "#ffffff"
+  "kind": "clean"
  },
  {
   "handle": "farmhouse-counter-chair",
@@ -710,8 +660,7 @@
   "colors": 13,
   "section": "Counter & bar",
   "local": "images/farmhouse-counter-chair.webp",
-  "flat": true,
-  "bg": "#ffffff"
+  "kind": "clean"
  },
  {
   "handle": "yorkshire-adirondack-counter-chair",
@@ -724,8 +673,7 @@
   "colors": 13,
   "section": "Counter & bar",
   "local": "images/yorkshire-adirondack-counter-chair.webp",
-  "flat": false,
-  "bg": "#b3ada6"
+  "kind": "photo"
  },
  {
   "handle": "duraweather-poly\u00ae-stationary-adirondack-chair",
@@ -738,8 +686,7 @@
   "colors": 15,
   "section": "Adirondack chairs",
   "local": "images/duraweather-poly--stationary-adirondack-chair.webp",
-  "flat": false,
-  "bg": "#5c633a"
+  "kind": "photo"
  },
  {
   "handle": "duraweather-poly-adirondack-3pc-2-glider-set-copy",
@@ -752,8 +699,7 @@
   "colors": 15,
   "section": "Gliders, benches & swings",
   "local": "images/duraweather-poly-adirondack-3pc-2-glider-set-copy.webp",
-  "flat": false,
-  "bg": "#576258"
+  "kind": "photo"
  },
  {
   "handle": "3-piece-counter-bistro-set-armless-new",
@@ -766,8 +712,7 @@
   "colors": 15,
   "section": "Counter & bar",
   "local": "images/3-piece-counter-bistro-set-armless-new.webp",
-  "flat": false,
-  "bg": "#dbd9d8"
+  "kind": "photo"
  },
  {
   "handle": "appleton-chaise-lounge-new",
@@ -780,8 +725,7 @@
   "colors": 15,
   "section": "Lounge & chaise",
   "local": "images/appleton-chaise-lounge-new.webp",
-  "flat": false,
-  "bg": "#7a7168"
+  "kind": "photo"
  },
  {
   "handle": "3-piece-2ft-glider-set-with-end-table-new",
@@ -794,8 +738,7 @@
   "colors": 14,
   "section": "Gliders, benches & swings",
   "local": "images/3-piece-2ft-glider-set-with-end-table-new.webp",
-  "flat": false,
-  "bg": "#8a8574"
+  "kind": "photo"
  },
  {
   "handle": "duraweather-poly-contemporary-rocker-3pc-set",
@@ -808,8 +751,7 @@
   "colors": 14,
   "section": "Rockers",
   "local": "images/duraweather-poly-contemporary-rocker-3pc-set.webp",
-  "flat": false,
-  "bg": "#645e50"
+  "kind": "photo"
  },
  {
   "handle": "contemporary-rocker-new",
@@ -822,8 +764,7 @@
   "colors": 15,
   "section": "Rockers",
   "local": "images/contemporary-rocker-new.webp",
-  "flat": false,
-  "bg": "#4c4716"
+  "kind": "photo"
  },
  {
   "handle": "5-piece-modern-adirondack-counter-set",
@@ -836,8 +777,7 @@
   "colors": 13,
   "section": "Counter & bar",
   "local": "images/5-piece-modern-adirondack-counter-set.webp",
-  "flat": true,
-  "bg": "#ffffff"
+  "kind": "clean"
  },
  {
   "handle": "7-piece-modern-adirondack-counter-set",
@@ -850,8 +790,7 @@
   "colors": 13,
   "section": "Counter & bar",
   "local": "images/7-piece-modern-adirondack-counter-set.webp",
-  "flat": true,
-  "bg": "#ffffff"
+  "kind": "clean"
  },
  {
   "handle": "5-piece-modern-adirondack-dining-set",
@@ -864,8 +803,7 @@
   "colors": 13,
   "section": "Dining",
   "local": "images/5-piece-modern-adirondack-dining-set.webp",
-  "flat": true,
-  "bg": "#ffffff"
+  "kind": "clean"
  },
  {
   "handle": "7-piece-modern-adirondack-dining-set",
@@ -878,8 +816,7 @@
   "colors": 13,
   "section": "Dining",
   "local": "images/7-piece-modern-adirondack-dining-set.webp",
-  "flat": true,
-  "bg": "#ffffff"
+  "kind": "clean"
  },
  {
   "handle": "modern-adirondack-counter-chair",
@@ -892,8 +829,7 @@
   "colors": 13,
   "section": "Counter & bar",
   "local": "images/modern-adirondack-counter-chair.webp",
-  "flat": true,
-  "bg": "#ffffff"
+  "kind": "clean"
  },
  {
   "handle": "6-piece-farmhouse-dining-set-with-bench-new",
@@ -906,12 +842,11 @@
   "colors": 15,
   "section": "Dining",
   "local": "images/6-piece-farmhouse-dining-set-with-bench-new.webp",
-  "flat": false,
-  "bg": "#d0d1d3"
+  "kind": "photo"
  },
  {
   "handle": "duraweather-poly\u00ae-3pc-33-round-counter-bistro-set-umbrella-not-included-copy",
-  "title": "3-Piece Counter Set With Arm Chairs",
+  "title": "3-Piece Counter Set with Arm Chairs",
   "raw_title": "3-Piece Counter Set With Arm Chairs",
   "min": 1699.0,
   "max": 1699.0,
@@ -920,8 +855,7 @@
   "colors": 15,
   "section": "Counter & bar",
   "local": "images/duraweather-poly--3pc-33-round-counter-bistro-set-umbrella-not-include.webp",
-  "flat": false,
-  "bg": "#acb0b4"
+  "kind": "photo"
  },
  {
   "handle": "duraweather-poly\u00ae-duraweather-poly\u00ae-5-piece-38-farmhouse-dining-set-umbrella-not-included",
@@ -934,8 +868,7 @@
   "colors": 15,
   "section": "Dining",
   "local": "images/duraweather-poly--duraweather-poly--5-piece-38-farmhouse-dining-set-um.webp",
-  "flat": false,
-  "bg": "#84857f"
+  "kind": "photo"
  },
  {
   "handle": "3-piece-maybeck-adirondack-counter-set-new",
@@ -948,8 +881,7 @@
   "colors": 15,
   "section": "Counter & bar",
   "local": "images/3-piece-maybeck-adirondack-counter-set-new.webp",
-  "flat": false,
-  "bg": "#8e9a95"
+  "kind": "photo"
  },
  {
   "handle": "duraweather-poly\u00ae-3pc-cottage-adirondack-counter-set-copy",
@@ -962,8 +894,7 @@
   "colors": 15,
   "section": "Counter & bar",
   "local": "images/duraweather-poly--3pc-cottage-adirondack-counter-set-copy.webp",
-  "flat": false,
-  "bg": "#858872"
+  "kind": "photo"
  },
  {
   "handle": "5-pc-48rd-countryside-dining-set-1",
@@ -976,8 +907,7 @@
   "colors": 13,
   "section": "Counter & bar",
   "local": "images/5-pc-48rd-countryside-dining-set-1.webp",
-  "flat": true,
-  "bg": "#ffffff"
+  "kind": "clean"
  },
  {
   "handle": "duraweather-poly-reg-3-pc-countryside-bistro-set",
@@ -990,8 +920,7 @@
   "colors": 14,
   "section": "Dining",
   "local": "images/duraweather-poly-reg-3-pc-countryside-bistro-set.webp",
-  "flat": true,
-  "bg": "#ffffff"
+  "kind": "clean"
  },
  {
   "handle": "5-piece-yorkshire-adirondack-counter-set",
@@ -1004,8 +933,7 @@
   "colors": 13,
   "section": "Counter & bar",
   "local": "images/5-piece-yorkshire-adirondack-counter-set.webp",
-  "flat": true,
-  "bg": "#ffffff"
+  "kind": "clean"
  },
  {
   "handle": "duraweather-poly-5piece-farmhouse-outdoor-dining-set",
@@ -1018,8 +946,7 @@
   "colors": 13,
   "section": "Counter & bar",
   "local": "images/duraweather-poly-5piece-farmhouse-outdoor-dining-set.webp",
-  "flat": true,
-  "bg": "#ffffff"
+  "kind": "clean"
  },
  {
   "handle": "duraweather-poly-classic-dining-set-46-in-table-cottage-light-grey",
@@ -1032,8 +959,7 @@
   "colors": 14,
   "section": "Dining",
   "local": "images/duraweather-poly-classic-dining-set-46-in-table-cottage-light-grey.webp",
-  "flat": true,
-  "bg": "#ffffff"
+  "kind": "clean"
  },
  {
   "handle": "duraweather-poly-reg-5-piece-38-farmhouse-counter-set",
@@ -1046,8 +972,7 @@
   "colors": 14,
   "section": "Counter & bar",
   "local": "images/duraweather-poly-reg-5-piece-38-farmhouse-counter-set.webp",
-  "flat": true,
-  "bg": "#ffffff"
+  "kind": "clean"
  },
  {
   "handle": "duraweather-poly-reg-3piece-adirondack-outdoor-bistro-set",
@@ -1060,8 +985,7 @@
   "colors": 14,
   "section": "Adirondack chairs",
   "local": "images/duraweather-poly-reg-3piece-adirondack-outdoor-bistro-set.webp",
-  "flat": true,
-  "bg": "#ffffff"
+  "kind": "clean"
  },
  {
   "handle": "duraweather-poly\u00ae-7-piece-yorkshire-adirondack-dining-set",
@@ -1074,8 +998,7 @@
   "colors": 14,
   "section": "Dining",
   "local": "images/duraweather-poly--7-piece-yorkshire-adirondack-dining-set.webp",
-  "flat": true,
-  "bg": "#ffffff"
+  "kind": "clean"
  },
  {
   "handle": "3-piece-maybeck-adirondack-set-new",
@@ -1088,8 +1011,7 @@
   "colors": 15,
   "section": "Adirondack chairs",
   "local": "images/3-piece-maybeck-adirondack-set-new.webp",
-  "flat": false,
-  "bg": "#827871"
+  "kind": "photo"
  },
  {
   "handle": "duraweather-poly\u00ae-lakeside-counter-chair",
@@ -1102,8 +1024,7 @@
   "colors": 29,
   "section": "Counter & bar",
   "local": "images/duraweather-poly--lakeside-counter-chair.webp",
-  "flat": true,
-  "bg": "#ffffff"
+  "kind": "clean"
  },
  {
   "handle": "set-of-4-adirondack-porch-rocker-lakeside-collection",
@@ -1116,8 +1037,7 @@
   "colors": 40,
   "section": "Rockers",
   "local": "images/set-of-4-adirondack-porch-rocker-lakeside-collection.webp",
-  "flat": true,
-  "bg": "#ffffff"
+  "kind": "clean"
  },
  {
   "handle": "oceanview-counter-height-tete-a-tete",
@@ -1130,8 +1050,7 @@
   "colors": 44,
   "section": "Counter & bar",
   "local": "images/oceanview-counter-height-tete-a-tete.webp",
-  "flat": true,
-  "bg": "#ffffff"
+  "kind": "clean"
  },
  {
   "handle": "oceanview-adirondack-counter-chair",
@@ -1144,8 +1063,7 @@
   "colors": 41,
   "section": "Counter & bar",
   "local": "images/oceanview-adirondack-counter-chair.webp",
-  "flat": true,
-  "bg": "#ffffff"
+  "kind": "clean"
  },
  {
   "handle": "oceanview-adirondack-dining-chair",
@@ -1158,8 +1076,7 @@
   "colors": 35,
   "section": "Dining",
   "local": "images/oceanview-adirondack-dining-chair.webp",
-  "flat": true,
-  "bg": "#ffffff"
+  "kind": "clean"
  },
  {
   "handle": "copy-of-set-of-12-duraweather-poly-reg-classic-king-size-folding-adirondack-chairs",
@@ -1172,8 +1089,7 @@
   "colors": 30,
   "section": "Adirondack chairs",
   "local": "images/copy-of-set-of-12-duraweather-poly-reg-classic-king-size-folding-adiro.webp",
-  "flat": true,
-  "bg": "#ffffff"
+  "kind": "clean"
  },
  {
   "handle": "ice-bucket-end-table",
@@ -1186,8 +1102,7 @@
   "colors": 2,
   "section": "Accessories",
   "local": "images/ice-bucket-end-table.webp",
-  "flat": true,
-  "bg": "#ffffff"
+  "kind": "clean"
  },
  {
   "handle": "duraweather-poly-reg-ultimate-48rd-classic-outdoor-fire-pit-package",
@@ -1200,8 +1115,7 @@
   "colors": 21,
   "section": "Fire pits",
   "local": "images/duraweather-poly-reg-ultimate-48rd-classic-outdoor-fire-pit-package.webp",
-  "flat": true,
-  "bg": "#ffffff"
+  "kind": "clean"
  },
  {
   "handle": "5-piece-oceanview-adirondack-dining-set-fully-assembled",
@@ -1214,8 +1128,7 @@
   "colors": 35,
   "section": "Dining",
   "local": "images/5-piece-oceanview-adirondack-dining-set-fully-assembled.webp",
-  "flat": true,
-  "bg": "#ffffff"
+  "kind": "clean"
  },
  {
   "handle": "7-piece-lakeside-adirondack-dining-set-new",
@@ -1228,12 +1141,11 @@
   "colors": 36,
   "section": "Dining",
   "local": "images/7-piece-lakeside-adirondack-dining-set-new.webp",
-  "flat": true,
-  "bg": "#ffffff"
+  "kind": "clean"
  },
  {
   "handle": "set-of-12-duraweather-poly-reg-king-size-folding-adirondack-chair-with-built-in-cup-holders-30-color-options",
-  "title": "Set of 12 Folding Adirondack Chairs With Built In Cupholders King Size",
+  "title": "Set of 12 Folding Adirondack Chairs with Built in Cupholders King Size",
   "raw_title": "Set of 12 Folding Adirondack Chairs With Built In Cupholders King Size",
   "min": 4999.0,
   "max": 5489.0,
@@ -1242,8 +1154,7 @@
   "colors": 29,
   "section": "Adirondack chairs",
   "local": "images/set-of-12-duraweather-poly-reg-king-size-folding-adirondack-chair-with.webp",
-  "flat": true,
-  "bg": "#ffffff"
+  "kind": "clean"
  },
  {
   "handle": "duraweather-poly\u00ae-table-or-chair-only",
@@ -1256,8 +1167,7 @@
   "colors": 12,
   "section": "Accessories",
   "local": "images/duraweather-poly--table-or-chair-only.webp",
-  "flat": true,
-  "bg": "#ffffff"
+  "kind": "clean"
  },
  {
   "handle": "reclining-adirondack-chair-king-size",
@@ -1270,8 +1180,7 @@
   "colors": 42,
   "section": "Adirondack chairs",
   "local": "images/reclining-adirondack-chair-king-size.webp",
-  "flat": true,
-  "bg": "#ffffff"
+  "kind": "clean"
  },
  {
   "handle": "duraweather-poly\u00ae-22-round-two-tier-end-table",
@@ -1284,12 +1193,11 @@
   "colors": 4,
   "section": "Accessories",
   "local": "images/duraweather-poly--22-round-two-tier-end-table.webp",
-  "flat": true,
-  "bg": "#ffffff"
+  "kind": "clean"
  },
  {
   "handle": "swivel-reclining-king-size-adirondack-chair",
-  "title": "Swivel And Reclining King Size Adirondack Chair",
+  "title": "Swivel and Reclining King Size Adirondack Chair",
   "raw_title": "Swivel And Reclining  King Size Adirondack Chair",
   "min": 1499.0,
   "max": 1499.0,
@@ -1298,8 +1206,7 @@
   "colors": 41,
   "section": "Adirondack chairs",
   "local": "images/swivel-reclining-king-size-adirondack-chair.webp",
-  "flat": true,
-  "bg": "#ffffff"
+  "kind": "clean"
  },
  {
   "handle": "breeze-coffee-chat-table",
@@ -1312,8 +1219,7 @@
   "colors": 8,
   "section": "Lounge & chaise",
   "local": "images/breeze-coffee-chat-table.webp",
-  "flat": true,
-  "bg": "#ffffff"
+  "kind": "clean"
  },
  {
   "handle": "breeze-coffee-chat-table-copy",
@@ -1326,8 +1232,7 @@
   "colors": 7,
   "section": "Lounge & chaise",
   "local": "images/breeze-coffee-chat-table-copy.webp",
-  "flat": true,
-  "bg": "#ffffff"
+  "kind": "clean"
  },
  {
   "handle": "modern-folding-adirondack-chair",
@@ -1340,8 +1245,7 @@
   "colors": 14,
   "section": "Adirondack chairs",
   "local": "images/modern-folding-adirondack-chair.webp",
-  "flat": true,
-  "bg": "#ffffff"
+  "kind": "clean"
  },
  {
   "handle": "duraweather-poly-stationary-adirondack-1",
@@ -1354,8 +1258,7 @@
   "colors": 14,
   "section": "Adirondack chairs",
   "local": "images/duraweather-poly-stationary-adirondack-1.webp",
-  "flat": true,
-  "bg": "#ffffff"
+  "kind": "clean"
  },
  {
   "handle": "duraweather-poly-balcony-chair-1",
@@ -1368,8 +1271,7 @@
   "colors": 14,
   "section": "Balcony & surfboard",
   "local": "images/duraweather-poly-balcony-chair-1.webp",
-  "flat": true,
-  "bg": "#ffffff"
+  "kind": "clean"
  },
  {
   "handle": "duraweather-poly-balcony-set",
@@ -1382,8 +1284,7 @@
   "colors": 14,
   "section": "Balcony & surfboard",
   "local": "images/duraweather-poly-balcony-set.webp",
-  "flat": true,
-  "bg": "#ffffff"
+  "kind": "clean"
  },
  {
   "handle": "duraweather-poly-tete-a-tete-table-set",
@@ -1396,8 +1297,7 @@
   "colors": 14,
   "section": "Counter & bar",
   "local": "images/duraweather-poly-tete-a-tete-table-set.webp",
-  "flat": true,
-  "bg": "#ffffff"
+  "kind": "clean"
  },
  {
   "handle": "duraweather-poly-easy-rider-chair",
@@ -1410,8 +1310,7 @@
   "colors": 14,
   "section": "Balcony & surfboard",
   "local": "images/duraweather-poly-easy-rider-chair.webp",
-  "flat": true,
-  "bg": "#ffffff"
+  "kind": "clean"
  },
  {
   "handle": "duraweather-poly-fanback-dining-chair-1",
@@ -1424,8 +1323,7 @@
   "colors": 14,
   "section": "Dining",
   "local": "images/duraweather-poly-fanback-dining-chair-1.webp",
-  "flat": true,
-  "bg": "#ffffff"
+  "kind": "clean"
  },
  {
   "handle": "duraweather-poly-modern-dining-chair-1",
@@ -1438,8 +1336,7 @@
   "colors": 14,
   "section": "Dining",
   "local": "images/duraweather-poly-modern-dining-chair-1.webp",
-  "flat": true,
-  "bg": "#ffffff"
+  "kind": "clean"
  },
  {
   "handle": "duraweather-poly",
@@ -1452,8 +1349,7 @@
   "colors": 26,
   "section": "Dining",
   "local": "images/duraweather-poly.webp",
-  "flat": true,
-  "bg": "#ffffff"
+  "kind": "clean"
  },
  {
   "handle": "duraweather-poly-dining-captain-chair",
@@ -1466,8 +1362,7 @@
   "colors": 14,
   "section": "Dining",
   "local": "images/duraweather-poly-dining-captain-chair.webp",
-  "flat": true,
-  "bg": "#ffffff"
+  "kind": "clean"
  },
  {
   "handle": "duraweather-poly-dining-bench",
@@ -1480,8 +1375,7 @@
   "colors": 14,
   "section": "Dining",
   "local": "images/duraweather-poly-dining-bench.webp",
-  "flat": true,
-  "bg": "#ffffff"
+  "kind": "clean"
  },
  {
   "handle": "duraweather-poly-38-square-table",
@@ -1494,8 +1388,7 @@
   "colors": 14,
   "section": "Accessories",
   "local": "images/duraweather-poly-38-square-table.webp",
-  "flat": true,
-  "bg": "#ffffff"
+  "kind": "clean"
  },
  {
   "handle": "duraweather-poly-38-round-table",
@@ -1508,8 +1401,7 @@
   "colors": 14,
   "section": "Accessories",
   "local": "images/duraweather-poly-38-round-table.webp",
-  "flat": true,
-  "bg": "#ffffff"
+  "kind": "clean"
  },
  {
   "handle": "duraweather-poly-33-round-table",
@@ -1522,8 +1414,7 @@
   "colors": 14,
   "section": "Accessories",
   "local": "images/duraweather-poly-33-round-table.webp",
-  "flat": true,
-  "bg": "#ffffff"
+  "kind": "clean"
  },
  {
   "handle": "duraweather-poly-33-square-table",
@@ -1536,12 +1427,11 @@
   "colors": 14,
   "section": "Accessories",
   "local": "images/duraweather-poly-33-square-table.webp",
-  "flat": true,
-  "bg": "#ffffff"
+  "kind": "clean"
  },
  {
   "handle": "duraweather-poly-38-x-64-table",
-  "title": "38 X 64 Table",
+  "title": "38 x 64 Table",
   "raw_title": "DuraWeather Poly 38 X 64 TABLE",
   "min": 1099.0,
   "max": 1299.0,
@@ -1550,8 +1440,7 @@
   "colors": 14,
   "section": "Accessories",
   "local": "images/duraweather-poly-38-x-64-table.webp",
-  "flat": true,
-  "bg": "#ffffff"
+  "kind": "clean"
  },
  {
   "handle": "duraweather-poly-2-chair-glider",
@@ -1564,8 +1453,7 @@
   "colors": 14,
   "section": "Gliders, benches & swings",
   "local": "images/duraweather-poly-2-chair-glider.webp",
-  "flat": true,
-  "bg": "#ffffff"
+  "kind": "clean"
  },
  {
   "handle": "duraweather-poly-4-chair-glider",
@@ -1578,8 +1466,7 @@
   "colors": 14,
   "section": "Gliders, benches & swings",
   "local": "images/duraweather-poly-4-chair-glider.webp",
-  "flat": true,
-  "bg": "#ffffff"
+  "kind": "clean"
  },
  {
   "handle": "duraweather-poly-swivel-glider",
@@ -1592,8 +1479,7 @@
   "colors": 14,
   "section": "Gliders, benches & swings",
   "local": "images/duraweather-poly-swivel-glider.webp",
-  "flat": true,
-  "bg": "#ffffff"
+  "kind": "clean"
  },
  {
   "handle": "duraweather-poly-folding-end-table",
@@ -1606,8 +1492,7 @@
   "colors": 14,
   "section": "Accessories",
   "local": "images/duraweather-poly-folding-end-table.webp",
-  "flat": true,
-  "bg": "#ffffff"
+  "kind": "clean"
  },
  {
   "handle": "duraweather-poly-balcony-end-table",
@@ -1620,8 +1505,7 @@
   "colors": 14,
   "section": "Balcony & surfboard",
   "local": "images/duraweather-poly-balcony-end-table.webp",
-  "flat": true,
-  "bg": "#ffffff"
+  "kind": "clean"
  },
  {
   "handle": "duraweather-poly-oval-end-table",
@@ -1634,8 +1518,7 @@
   "colors": 14,
   "section": "Accessories",
   "local": "images/duraweather-poly-oval-end-table.webp",
-  "flat": true,
-  "bg": "#ffffff"
+  "kind": "clean"
  },
  {
   "handle": "duraweather-poly-round-end-table",
@@ -1648,8 +1531,7 @@
   "colors": 14,
   "section": "Accessories",
   "local": "images/duraweather-poly-round-end-table.webp",
-  "flat": true,
-  "bg": "#ffffff"
+  "kind": "clean"
  },
  {
   "handle": "duraweather-poly-modern-adirondack",
@@ -1662,8 +1544,7 @@
   "colors": 14,
   "section": "Adirondack chairs",
   "local": "images/duraweather-poly-modern-adirondack.webp",
-  "flat": true,
-  "bg": "#ffffff"
+  "kind": "clean"
  },
  {
   "handle": "duraweather-poly-modern-folding-adirondack",
@@ -1676,8 +1557,7 @@
   "colors": 14,
   "section": "Adirondack chairs",
   "local": "images/duraweather-poly-modern-folding-adirondack.webp",
-  "flat": true,
-  "bg": "#ffffff"
+  "kind": "clean"
  },
  {
   "handle": "duraweather-poly-modern-2-glider-chair",
@@ -1690,8 +1570,7 @@
   "colors": 14,
   "section": "Gliders, benches & swings",
   "local": "images/duraweather-poly-modern-2-glider-chair.webp",
-  "flat": true,
-  "bg": "#ffffff"
+  "kind": "clean"
  },
  {
   "handle": "duraweather-poly-modern-4-glider-bench",
@@ -1704,8 +1583,7 @@
   "colors": 14,
   "section": "Gliders, benches & swings",
   "local": "images/duraweather-poly-modern-4-glider-bench.webp",
-  "flat": true,
-  "bg": "#ffffff"
+  "kind": "clean"
  },
  {
   "handle": "duraweather-poly-chaise-lounge",
@@ -1718,8 +1596,7 @@
   "colors": 14,
   "section": "Lounge & chaise",
   "local": "images/duraweather-poly-chaise-lounge.webp",
-  "flat": true,
-  "bg": "#ffffff"
+  "kind": "clean"
  },
  {
   "handle": "duraweather-poly-slat-back-rocking-chair",
@@ -1732,8 +1609,7 @@
   "colors": 14,
   "section": "Rockers",
   "local": "images/duraweather-poly-slat-back-rocking-chair.webp",
-  "flat": true,
-  "bg": "#ffffff"
+  "kind": "clean"
  },
  {
   "handle": "duraweather-poly-surfboard-adirondack-tail-chair",
@@ -1746,8 +1622,7 @@
   "colors": 14,
   "section": "Balcony & surfboard",
   "local": "images/duraweather-poly-surfboard-adirondack-tail-chair.webp",
-  "flat": true,
-  "bg": "#ffffff"
+  "kind": "clean"
  },
  {
   "handle": "duraweather-poly-surfboard-adirondack-nose-chair",
@@ -1760,8 +1635,7 @@
   "colors": 14,
   "section": "Balcony & surfboard",
   "local": "images/duraweather-poly-surfboard-adirondack-nose-chair.webp",
-  "flat": true,
-  "bg": "#ffffff"
+  "kind": "clean"
  },
  {
   "handle": "duraweather-poly-surfboard-balcony-chair-tail",
@@ -1774,8 +1648,7 @@
   "colors": 14,
   "section": "Balcony & surfboard",
   "local": "images/duraweather-poly-surfboard-balcony-chair-tail.webp",
-  "flat": true,
-  "bg": "#ffffff"
+  "kind": "clean"
  },
  {
   "handle": "duraweather-poly-surfboard-nose-balcony-chair",
@@ -1788,8 +1661,7 @@
   "colors": 14,
   "section": "Balcony & surfboard",
   "local": "images/duraweather-poly-surfboard-nose-balcony-chair.webp",
-  "flat": true,
-  "bg": "#ffffff"
+  "kind": "clean"
  },
  {
   "handle": "duraweather-poly-surfboard-tail-2-glider",
@@ -1802,8 +1674,7 @@
   "colors": 14,
   "section": "Balcony & surfboard",
   "local": "images/duraweather-poly-surfboard-tail-2-glider.webp",
-  "flat": true,
-  "bg": "#ffffff"
+  "kind": "clean"
  },
  {
   "handle": "duraweather-poly-surfboard-nose-2-glider-chair",
@@ -1816,8 +1687,7 @@
   "colors": 14,
   "section": "Balcony & surfboard",
   "local": "images/duraweather-poly-surfboard-nose-2-glider-chair.webp",
-  "flat": true,
-  "bg": "#ffffff"
+  "kind": "clean"
  },
  {
   "handle": "duraweather-poly-surfboard-coffee-table",
@@ -1830,8 +1700,7 @@
   "colors": 14,
   "section": "Balcony & surfboard",
   "local": "images/duraweather-poly-surfboard-coffee-table.webp",
-  "flat": true,
-  "bg": "#ffffff"
+  "kind": "clean"
  },
  {
   "handle": "duraweather-poly-surfboard-table-48",
@@ -1844,8 +1713,7 @@
   "colors": 14,
   "section": "Balcony & surfboard",
   "local": "images/duraweather-poly-surfboard-table-48.webp",
-  "flat": true,
-  "bg": "#ffffff"
+  "kind": "clean"
  },
  {
   "handle": "duraweather-poly-surfboard",
@@ -1858,8 +1726,7 @@
   "colors": 28,
   "section": "Balcony & surfboard",
   "local": "images/duraweather-poly-surfboard.webp",
-  "flat": true,
-  "bg": "#ffffff"
+  "kind": "clean"
  },
  {
   "handle": "duraweather-poly-surfboard-folding-end-table",
@@ -1872,8 +1739,7 @@
   "colors": 14,
   "section": "Balcony & surfboard",
   "local": "images/duraweather-poly-surfboard-folding-end-table.webp",
-  "flat": true,
-  "bg": "#ffffff"
+  "kind": "clean"
  },
  {
   "handle": "duraweather-poly-surfboard-balcony-table",
@@ -1886,8 +1752,7 @@
   "colors": 14,
   "section": "Balcony & surfboard",
   "local": "images/duraweather-poly-surfboard-balcony-table.webp",
-  "flat": true,
-  "bg": "#ffffff"
+  "kind": "clean"
  },
  {
   "handle": "duraweather-poly-surfboard-tete-a-tete",
@@ -1900,8 +1765,7 @@
   "colors": 14,
   "section": "Balcony & surfboard",
   "local": "images/duraweather-poly-surfboard-tete-a-tete.webp",
-  "flat": true,
-  "bg": "#ffffff"
+  "kind": "clean"
  },
  {
   "handle": "duraweather-poly-saddle-stool",
@@ -1914,8 +1778,7 @@
   "colors": 14,
   "section": "Counter & bar",
   "local": "images/duraweather-poly-saddle-stool.webp",
-  "flat": true,
-  "bg": "#ffffff"
+  "kind": "clean"
  },
  {
   "handle": "duraweather-poly-round-bar-stool",
@@ -1928,8 +1791,7 @@
   "colors": 14,
   "section": "Counter & bar",
   "local": "images/duraweather-poly-round-bar-stool.webp",
-  "flat": true,
-  "bg": "#ffffff"
+  "kind": "clean"
  },
  {
   "handle": "duraweather-poly-club-dining-chair",
@@ -1942,8 +1804,7 @@
   "colors": 14,
   "section": "Dining",
   "local": "images/duraweather-poly-club-dining-chair.webp",
-  "flat": true,
-  "bg": "#ffffff"
+  "kind": "clean"
  },
  {
   "handle": "duraweather-poly-bar-table",
@@ -1956,8 +1817,7 @@
   "colors": 14,
   "section": "Accessories",
   "local": "images/duraweather-poly-bar-table.webp",
-  "flat": true,
-  "bg": "#ffffff"
+  "kind": "clean"
  },
  {
   "handle": "duraweather-poly-breeze-deep-seat-storage-ice-table",
@@ -1970,8 +1830,7 @@
   "colors": 14,
   "section": "Accessories",
   "local": "images/duraweather-poly-breeze-deep-seat-storage-ice-table.webp",
-  "flat": true,
-  "bg": "#ffffff"
+  "kind": "clean"
  },
  {
   "handle": "duraweather-poly-modern-64-dining-bench",
@@ -1984,8 +1843,7 @@
   "colors": 14,
   "section": "Dining",
   "local": "images/duraweather-poly-modern-64-dining-bench.webp",
-  "flat": true,
-  "bg": "#ffffff"
+  "kind": "clean"
  },
  {
   "handle": "duraweather-poly-modern-38-square-table",
@@ -1998,12 +1856,11 @@
   "colors": 14,
   "section": "Accessories",
   "local": "images/duraweather-poly-modern-38-square-table.webp",
-  "flat": true,
-  "bg": "#ffffff"
+  "kind": "clean"
  },
  {
   "handle": "duraweather-poly-modern-38-x-64-table",
-  "title": "MODERN 38 x 64 TABLE",
+  "title": "Modern 38 x 64 Table",
   "raw_title": "DuraWeather Poly MODERN 38 x 64 TABLE",
   "min": 1399.0,
   "max": 1599.0,
@@ -2012,12 +1869,11 @@
   "colors": 14,
   "section": "Accessories",
   "local": "images/duraweather-poly-modern-38-x-64-table.webp",
-  "flat": true,
-  "bg": "#ffffff"
+  "kind": "clean"
  },
  {
   "handle": "duraweather-poly-modern-38-x-74-table",
-  "title": "MODERN 38 x 74 TABLE",
+  "title": "Modern 38 x 74 Table",
   "raw_title": "DuraWeather Poly MODERN 38 x 74 TABLE",
   "min": 1099.0,
   "max": 1149.0,
@@ -2026,8 +1882,7 @@
   "colors": 14,
   "section": "Accessories",
   "local": "images/duraweather-poly-modern-38-x-74-table.webp",
-  "flat": true,
-  "bg": "#ffffff"
+  "kind": "clean"
  },
  {
   "handle": "duraweather-poly-modern-balcony-end-table-1",
@@ -2040,8 +1895,7 @@
   "colors": 14,
   "section": "Balcony & surfboard",
   "local": "images/duraweather-poly-modern-balcony-end-table-1.webp",
-  "flat": true,
-  "bg": "#ffffff"
+  "kind": "clean"
  },
  {
   "handle": "duraweather-poly-modern-end-table-1",
@@ -2054,8 +1908,7 @@
   "colors": 14,
   "section": "Accessories",
   "local": "images/duraweather-poly-modern-end-table-1.webp",
-  "flat": true,
-  "bg": "#ffffff"
+  "kind": "clean"
  },
  {
   "handle": "duraweather-poly-modern-balcony-set",
@@ -2068,8 +1921,7 @@
   "colors": 14,
   "section": "Balcony & surfboard",
   "local": "images/duraweather-poly-modern-balcony-set.webp",
-  "flat": true,
-  "bg": "#ffffff"
+  "kind": "clean"
  },
  {
   "handle": "duraweather-poly-modern-tete-a-tete",
@@ -2082,8 +1934,7 @@
   "colors": 14,
   "section": "Counter & bar",
   "local": "images/duraweather-poly-modern-tete-a-tete.webp",
-  "flat": true,
-  "bg": "#ffffff"
+  "kind": "clean"
  },
  {
   "handle": "duraweather-poly-modern-swivel-glider",
@@ -2096,8 +1947,7 @@
   "colors": 14,
   "section": "Gliders, benches & swings",
   "local": "images/duraweather-poly-modern-swivel-glider.webp",
-  "flat": true,
-  "bg": "#ffffff"
+  "kind": "clean"
  },
  {
   "handle": "malibu-outdoor-lounge-chair-sunbrella\u00ae-fabric",
@@ -2110,8 +1960,7 @@
   "colors": 26,
   "section": "Gliders, benches & swings",
   "local": "images/malibu-outdoor-lounge-chair-sunbrella--fabric.webp",
-  "flat": false,
-  "bg": "#76682e"
+  "kind": "photo"
  },
  {
   "handle": "5-piece-exclusive-adirondack-dining-table-set",
@@ -2124,8 +1973,7 @@
   "colors": 23,
   "section": "Dining",
   "local": "images/5-piece-exclusive-adirondack-dining-table-set.webp",
-  "flat": false,
-  "bg": "#c3baa9"
+  "kind": "photo"
  },
  {
   "handle": "5-piece-coronado-adirondack-counter-table-set",
@@ -2138,8 +1986,7 @@
   "colors": 23,
   "section": "Counter & bar",
   "local": "images/5-piece-coronado-adirondack-counter-table-set.webp",
-  "flat": false,
-  "bg": "#7b654b"
+  "kind": "photo"
  },
  {
   "handle": "5-piece-harmony-adirondack-dining-table-set-copy",
@@ -2152,8 +1999,7 @@
   "colors": 23,
   "section": "Dining",
   "local": "images/5-piece-harmony-adirondack-dining-table-set-copy.webp",
-  "flat": true,
-  "bg": "#ffffff"
+  "kind": "clean"
  },
  {
   "handle": "5-piece-haven-36-round-dining-set-with-swivel-chairs-copy",
@@ -2166,8 +2012,7 @@
   "colors": 23,
   "section": "Dining",
   "local": "images/5-piece-haven-36-round-dining-set-with-swivel-chairs-copy.webp",
-  "flat": true,
-  "bg": "#ffffff"
+  "kind": "clean"
  },
  {
   "handle": "7-piece-harmony-adirondack-dining-table-set",
@@ -2180,8 +2025,7 @@
   "colors": 23,
   "section": "Dining",
   "local": "images/7-piece-harmony-adirondack-dining-table-set.webp",
-  "flat": true,
-  "bg": "#ffffff"
+  "kind": "clean"
  },
  {
   "handle": "5-piece-haven-43-round-dining-set",
@@ -2194,8 +2038,7 @@
   "colors": 23,
   "section": "Dining",
   "local": "images/5-piece-haven-43-round-dining-set.webp",
-  "flat": true,
-  "bg": "#ffffff"
+  "kind": "clean"
  },
  {
   "handle": "5-piece-haven-60-round-dining-set",
@@ -2208,8 +2051,7 @@
   "colors": 23,
   "section": "Dining",
   "local": "images/5-piece-haven-60-round-dining-set.webp",
-  "flat": true,
-  "bg": "#ffffff"
+  "kind": "clean"
  },
  {
   "handle": "5-piece-brookshire-dining-table-set-presale",
@@ -2222,8 +2064,7 @@
   "colors": 3,
   "section": "Dining",
   "local": "images/5-piece-brookshire-dining-table-set-presale.webp",
-  "flat": true,
-  "bg": "#ffffff"
+  "kind": "clean"
  },
  {
   "handle": "7-piece-brookshire-dining-table-set-presale",
@@ -2236,12 +2077,11 @@
   "colors": 3,
   "section": "Dining",
   "local": "images/7-piece-brookshire-dining-table-set-presale.webp",
-  "flat": true,
-  "bg": "#ffffff"
+  "kind": "clean"
  },
  {
   "handle": "9-piece-extension-savannah-dining-table-set-with-folding-reclining-chairs-presale",
-  "title": "9-Piece Extension Savannah Dining Table Set With Folding & Reclining Chairs (Presale)",
+  "title": "9-Piece Extension Savannah Dining Table Set with Folding & Reclining Chairs (Presale)",
   "raw_title": "9-Piece Extension Savannah Dining Table Set With Folding & Reclining Chairs (Presale)",
   "min": 4999.0,
   "max": 4999.0,
@@ -2250,8 +2090,7 @@
   "colors": 1,
   "section": "Dining",
   "local": "images/9-piece-extension-savannah-dining-table-set-with-folding-reclining-cha.webp",
-  "flat": true,
-  "bg": "#ffffff"
+  "kind": "clean"
  },
  {
   "handle": "9-piece-extension-brookshire-dining-table-set-presale",
@@ -2264,12 +2103,11 @@
   "colors": 1,
   "section": "Dining",
   "local": "images/9-piece-extension-brookshire-dining-table-set-presale.webp",
-  "flat": true,
-  "bg": "#ffffff"
+  "kind": "clean"
  },
  {
   "handle": "7-piece-savannah-dining-table-set-with-folding-reclining-chairs-presale",
-  "title": "7-Piece Savannah Dining Table Set With Folding & Reclining Chairs (Presale)",
+  "title": "7-Piece Savannah Dining Table Set with Folding & Reclining Chairs (Presale)",
   "raw_title": "7-Piece Savannah Dining Table Set With Folding & Reclining Chairs (Presale)",
   "min": 3999.0,
   "max": 3999.0,
@@ -2278,12 +2116,11 @@
   "colors": 3,
   "section": "Dining",
   "local": "images/7-piece-savannah-dining-table-set-with-folding-reclining-chairs-presal.webp",
-  "flat": true,
-  "bg": "#ffffff"
+  "kind": "clean"
  },
  {
   "handle": "chaise-lounge-with-wheels-and-adjustable-back-presale",
-  "title": "Chaise Lounge With Wheels And Adjustable Back (Presale)",
+  "title": "Chaise Lounge with Wheels and Adjustable Back (Presale)",
   "raw_title": "Chaise Lounge With Wheels And Adjustable Back (Presale)",
   "min": 699.0,
   "max": 699.0,
@@ -2292,8 +2129,7 @@
   "colors": 3,
   "section": "Lounge & chaise",
   "local": "images/chaise-lounge-with-wheels-and-adjustable-back-presale.webp",
-  "flat": false,
-  "bg": "#f2ede8"
+  "kind": "photo"
  },
  {
   "handle": "folding-side-table-w-removable-serving-tray-presale",
@@ -2306,8 +2142,7 @@
   "colors": 11,
   "section": "Accessories",
   "local": "images/folding-side-table-w-removable-serving-tray-presale.webp",
-  "flat": true,
-  "bg": "#ffffff"
+  "kind": "clean"
  },
  {
   "handle": "3-piece-brookshire-dining-table-set-presale",
@@ -2320,8 +2155,7 @@
   "colors": 1,
   "section": "Dining",
   "local": "images/3-piece-brookshire-dining-table-set-presale.webp",
-  "flat": true,
-  "bg": "#ffffff"
+  "kind": "clean"
  },
  {
   "handle": "side-table-18-round-two-tier-presale",
@@ -2334,8 +2168,7 @@
   "colors": 5,
   "section": "Accessories",
   "local": "images/side-table-18-round-two-tier-presale.webp",
-  "flat": true,
-  "bg": "#ffffff"
+  "kind": "clean"
  },
  {
   "handle": "original-adirondack-swivel-glider-presale",
@@ -2348,8 +2181,7 @@
   "colors": 9,
   "section": "Gliders, benches & swings",
   "local": "images/original-adirondack-swivel-glider-presale.webp",
-  "flat": true,
-  "bg": "#ffffff"
+  "kind": "clean"
  },
  {
   "handle": "classic-adirondack-5ft-glider-console-with-cupholders-presale",
@@ -2362,12 +2194,11 @@
   "colors": 1,
   "section": "Gliders, benches & swings",
   "local": "images/classic-adirondack-5ft-glider-console-with-cupholders-presale.webp",
-  "flat": true,
-  "bg": "#ffffff"
+  "kind": "clean"
  },
  {
   "handle": "set-of-2-classic-adirondack-single-gliders-with-folding-end-table-presale-1",
-  "title": "Set of 2 Classic Adirondack Single Gliders With Folding End Table (Presale)",
+  "title": "Set of 2 Classic Adirondack Single Gliders with Folding End Table (Presale)",
   "raw_title": "Set of 2 Classic Adirondack Single Gliders With Folding End Table (Presale)",
   "min": 1499.0,
   "max": 1499.0,
@@ -2376,8 +2207,7 @@
   "colors": 1,
   "section": "Gliders, benches & swings",
   "local": "images/set-of-2-classic-adirondack-single-gliders-with-folding-end-table-pres.webp",
-  "flat": true,
-  "bg": "#ffffff"
+  "kind": "clean"
  },
  {
   "handle": "classic-adirondack-single-glider-presale",
@@ -2390,7 +2220,6 @@
   "colors": 1,
   "section": "Gliders, benches & swings",
   "local": "images/classic-adirondack-single-glider-presale.webp",
-  "flat": true,
-  "bg": "#ffffff"
+  "kind": "clean"
  }
 ]
